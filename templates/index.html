@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Random Number Generator</title>
+  <link rel="icon" type="image/png" href="/static/logo.png" />
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <!-- Decorative Background Blobs -->
+  <div class="blob blob-1"></div>
+  <div class="blob blob-2"></div>
+
+  <main class="container">
+    <header style="display: flex; flex-direction: column; align-items: center; text-align: center;">
+      <img src="/static/logo.png" alt="Randomize Logo" style="width: 80px; height: 80px; margin-bottom: 15px; border-radius: 12px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+      <h1>Randomize.</h1>
+      <p class="subtitle">Generate a random integer between a minimum and maximum value.</p>
+    </header>
+
+    <form id="rngForm" class="controls" onsubmit="return false;">
+      <div class="input-group">
+        <div class="input-wrapper">
+          <label for="minimum">Minimum</label>
+          <input id="minimum" name="minimum" type="number" placeholder="e.g. 1" required />
+        </div>
+        <div class="input-wrapper">
+          <label for="maximum">Maximum</label>
+          <input id="maximum" name="maximum" type="number" placeholder="e.g. 100" required />
+        </div>
+      </div>
+
+      <div class="actions">
+        <button id="swapBtn" type="button" aria-label="Swap values">Swap</button>
+        <button id="randomRangeBtn" type="button" aria-label="Randomize Range">Random Range</button>
+        <button id="generateBtn" type="submit" class="primary">Generate</button>
+      </div>
+
+      <div id="error" class="error" role="alert" aria-live="assertive" hidden></div>
+    </form>
+
+    <section class="result-card" aria-live="polite">
+      <div class="result-actions">
+        <button id="copyBtn" aria-label="Copy result">Copy</button>
+      </div>
+      <div class="result-value" id="resultValue">—</div>
+    </section>
+
+    <section class="history-section">
+      <div class="history-header">
+        <h2>Recent Generations</h2>
+        <button id="clearHistoryBtn" aria-label="Clear History">Clear</button>
+      </div>
+      <ul id="historyList" class="history">
+        <!-- History items will be injected here via JS -->
+      </ul>
+    </section>
+  </main>
+
+  <div style="position: fixed; bottom: 10px; right: 10px; color: rgba(156, 163, 175, 0.7); font-size: 0.85rem; font-family: sans-serif; pointer-events: none; user-select: none;">
+    Created by Somashankar
+  </div>
+
+  <script src="/static/script.js"></script>
+</body>
+</html>
