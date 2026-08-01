@@ -2,6 +2,8 @@
 
 A sleek, modern Random Number Generator application that provides both a **Web Interface** and a **Desktop GUI**. 
 
+🚀 **Live Web App:** [https://randomize-random-number-generator.vercel.app/](https://randomize-random-number-generator.vercel.app/)
+
 Created by **Somashankar**.
 
 ---
